@@ -1,0 +1,28 @@
+.main {
+  box-sizing: border-box;
+  padding-left: 16px;
+  padding-right: 32px;
+  height: 60px;
+  //display: flex;
+  //align-items: center;
+  //justify-content: space-between;
+}
+
+.caption {
+  margin: 0;
+  //font-size: 18px;
+  //font-weight: 600;
+  color: var(--text-primary-color);
+}
+
+.control {
+  border: 1px solid #c3bcbc;
+  background-color: aquamarine;
+  color: black;
+
+  &[data-active] {
+    background-color: #d95f55;
+    color: white;
+    border-radius: 20px;
+  }
+}
