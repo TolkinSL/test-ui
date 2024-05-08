@@ -1,3 +1,9 @@
+# Тестирование стилизации внешних UI компомонентов
+
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+
+Демонстрация проекта https://tolkinsl.github.io/test-ui/
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
