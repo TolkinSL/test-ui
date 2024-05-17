@@ -1,0 +1,15 @@
+.layout {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  //max-width: 1280px;
+  //min-width: 768px;
+  min-height: calc(100vh - 60px);
+  background: #fff;
+}
+
+.main {
+  display: flex;
+  row-gap: 32px;
+}

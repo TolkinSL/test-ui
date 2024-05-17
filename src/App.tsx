@@ -1,37 +1,40 @@
 // import {useState} from 'react'
-import './App.scss'
-import '@mantine/core/styles.css';
-import {MantineProvider} from '@mantine/core';
+import "./App.scss";
+import "@mantine/core/styles.css";
+import {MantineProvider} from "@mantine/core";
 import {RouterProvider, createBrowserRouter} from "react-router-dom";
-import Layout from "./components/layout/layout.tsx";
-import UiTest from "./components/ui-test/ui-test.tsx";
+// import Layout from "./components/layout/layout.tsx";
+import CorpLayout from "./components/corp-layout/corp-layout.tsx";
+// import UiTest from "./components/ui-test/ui-test.tsx";
+import CorpMain from "./components/corp-main/corp-main.tsx";
+import ItemList from "./components/item-list/item-list.tsx";
 
 const router = createBrowserRouter([
+    // {
+    //   path: "/",
+    //   Component: Layout,
+    //   children: [
+    //     {
+    //       path: "/",
+    //       Component: UiTest,
+    //     },
+    //   ],
+    // },
     {
       path: "/",
-      Component: Layout,
+      Component: CorpLayout,
       children: [
         {
           path: "/",
-          Component: UiTest,
-        }
+          Component: CorpMain,
+          children: [
+            {
+              path: "/:id",
+              Component: ItemList,
+            },
+          ],
+        },
       ],
-      // children: [
-      //   {
-      //     path: "/",
-      //     Component: FilmList,
-      //     children: [
-      //       {
-      //         path: "/:id",
-      //         Component: FilmList,
-      //       },
-      //     ],
-      //   },
-      //   {
-      //     path: "film/:id/:genre_id",
-      //     Component: FilmInfo,
-      //   },
-      // ],
     },
   ],
   {
@@ -45,10 +48,10 @@ function App() {
   return (
     <>
       <MantineProvider>
-        <RouterProvider router={router}/>
+        <RouterProvider router={router} />
       </MantineProvider>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

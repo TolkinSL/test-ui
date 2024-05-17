@@ -1,8 +1,8 @@
 import {NavLink} from 'react-router-dom';
-import styles from './header.module.scss'
+import styles from './corp-header.module.scss'
 import cn from 'classnames';
 
-function Header() {
+function CorpHeader() {
   return (
     <div className={styles.main}>
       <h1 className={styles.caption}>Тестирование компонентов</h1>
@@ -14,4 +14,4 @@ function Header() {
   )
 }
 
-export default Header;
+export default CorpHeader;
